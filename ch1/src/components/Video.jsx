@@ -1,10 +1,9 @@
-function Video({url}) {
-  let topic="React JS"
+function Video({url,topic}) {
   let bg='dark'
   return (
     <div>
       <img src={url} alt="Katherine Johnson" />
-      <div className={bg} style={{backgroundColor:'red', width:'20vw', margin:'10px'}}>Tutorial Components</div>
+      <div className={bg} style={{backgroundColor:'red', width:'20vw', margin:'10px'}}>{topic}</div>
     </div>
   );
 }
