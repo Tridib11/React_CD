@@ -1,7 +1,11 @@
  import './PlayButton.css'
-export default function PlayButton(){
+export default function PlayButton({message,children}){
+
+  function handleClick(){
+    console.log(message)
+  }
   return (
-    <button onClick={console.log("Print")}>Play</button>
+    <button onClick={handleClick}>{children}</button>
   )
 }
 
