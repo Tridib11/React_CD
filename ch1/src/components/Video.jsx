@@ -1,5 +1,5 @@
 import "./Video.css"
-function Video({ url, title, channel, views, time }) {
+function Video({ url, title, channel="default-name", views, time }) {
   return (
     <>
       <div className="container">
