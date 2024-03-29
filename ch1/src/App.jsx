@@ -1,7 +1,8 @@
 import "./App.css";
 import videos from "./data/data";
-import PlayButton from "./components/PlayButton";
 import Video from "./components/Video";
+import React from "react";
+import PlayButton from "./components/PlayButton";
 
 
 function App() {
@@ -20,7 +21,8 @@ function App() {
         />
       ))}
       <div style={{clear:'both'}}>
-        <PlayButton></PlayButton>
+        <PlayButton message={"play-msg"}>Play</PlayButton>
+        <PlayButton message={"pause-msg"}>Pause</PlayButton>
       </div>
     </div>
   );
