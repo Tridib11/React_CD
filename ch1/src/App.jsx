@@ -3,7 +3,6 @@ import "./App.css";
 import videos from "./data/data";
 import PlayButton from "./components/PlayButton";
 function App() {
-  
   return (
     <div className="App">
       <div className="Heading">Videos</div>
@@ -18,7 +17,9 @@ function App() {
           verified={video.verified}
         />
       ))}
-     <PlayButton></PlayButton>
+      <div style={{clear:'both'}}>
+        <PlayButton></PlayButton>
+      </div>
     </div>
   );
 }
