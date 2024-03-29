@@ -3,7 +3,7 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <div>Videos</div>
+      <div className="Heading">Videos</div>
       <Video
         url={"https://placebear.com/640/360"}
         views={"10K"}
