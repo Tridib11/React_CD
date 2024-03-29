@@ -1,10 +1,18 @@
-function Video({url,topic}) {
-  let bg='dark'
+import "./Video.css"
+function Video({ url, title, channel, views, time }) {
   return (
-    <div>
-      <img src={url} alt="Katherine Johnson" />
-      <div className={bg} style={{backgroundColor:'red', width:'20vw', margin:'10px'}}>{topic}</div>
-    </div>
+    <>
+      <div className="container">
+        <div className="pic">
+          <img src={url} alt="Katherine Johnson" />
+        </div>
+        <div className="title">{title}</div>
+        <div className="channel">{channel}</div>
+        <div className="views"> views
+          {views} <span>.</span> {time}
+        </div>
+      </div>
+    </>
   );
 }
 
