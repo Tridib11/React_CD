@@ -16,5 +16,4 @@ function Video({id, title, channel="default-name", views, time,verified=false })
     </>
   );
 }
-
-export default Video;
+export default Video
