@@ -7,7 +7,7 @@ function Video({ url, title, channel="default-name", views, time,verified=false 
           <img src={url} alt="Katherine Johnson" />
         </div>
         <div className="title">{title}</div>
-        <div className="channel">{channel} {verified ? '✅' : '❌'}</div>
+        <div className="channel">{channel} {verified ? '✅' : ''}</div>
 
         <div className="views">
           {views } views <span>.</span> {time}
