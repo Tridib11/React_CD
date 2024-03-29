@@ -1,18 +1,27 @@
 import Video from "./components/Video";
 import "./App.css";
 function App() {
+  let obj={
+        url:"https://picsum.photos/id/1/160/90",
+        views:"10K",
+        time:"1 year ago",
+        title:"React js Tutorial",
+        channel:"Tridib"
+  }
   return (
     <div className="App">
       <div className="Heading">Videos</div>
+      {/* passing by object destructuring */}
+      <Video {...obj}/>  
       <Video
-        url={"https://placebear.com/640/360"}
-        views={"10K"}
-        time={"1 year ago"}
-        title={"React js Tutorial"}
+        url={"https://picsum.photos/id/2/160/90"}
+        views={"100K"}
+        time={"1 month ago"}
+        title={"Node js Tutorial"}
         channel={"Tridib"}
       />
-      <Video
-        url={"https://placebear.com/640/360"}
+       <Video
+        url={"https://picsum.photos/id/3/160/90"}
         views={"100K"}
         time={"1 month ago"}
         title={"Node js Tutorial"}
