@@ -24,8 +24,8 @@ function App() {
       />
        <Video
         url={"https://picsum.photos/id/3/160/90"}
-        views={"100K"}
-        time={"1 month ago"}
+        views={"1K"}
+        time={"1 week ago"}
         title={"Mongo DB Tutorial"}
         channel={"Tridib"}
         verified={false}
