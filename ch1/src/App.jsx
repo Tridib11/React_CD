@@ -6,7 +6,8 @@ function App() {
         views:"10K",
         time:"1 year ago",
         title:"React js Tutorial",
-        channel:"Tridib"
+        channel:"Tridib",
+        verified:true
   }
   return (
     <div className="App">
@@ -19,13 +20,15 @@ function App() {
         time={"1 month ago"}
         title={"Node js Tutorial"}
         channel={"Tridib"}
+        verified={true}
       />
        <Video
         url={"https://picsum.photos/id/3/160/90"}
         views={"100K"}
         time={"1 month ago"}
-        title={"Node js Tutorial"}
+        title={"Mongo DB Tutorial"}
         channel={"Tridib"}
+        verified={false}
       />
     </div>
   );
