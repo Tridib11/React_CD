@@ -5,7 +5,7 @@ function Counter() {
   function handleClickButton(event) {
     event.stopPropagation()
     setNumber(number+1)
-  }
+  } 
   return(
   <>
     <h1 style={{color:'white'}}>{number}</h1>
