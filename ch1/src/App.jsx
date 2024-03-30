@@ -3,6 +3,7 @@ import videos from "./data/data";
 import Video from "./components/Video";
 import React from "react";
 import PlayButton from "./components/PlayButton";
+import Counter from "./components/Counter";
 
 function App() {
   return (
@@ -26,6 +27,9 @@ function App() {
         </Video>
         
       ))}
+
+
+      <Counter></Counter>
     </div>
   );
 }
