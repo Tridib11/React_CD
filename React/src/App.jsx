@@ -12,14 +12,14 @@ function App() {
   }
 
   function deleteVideo(id){
-    
+
   }
   return (
     <div className="App">
       <div className="Heading">
         <AddVideo addVideos={addVideos}></AddVideo>
       </div>
-      <VideoList videos={videos}></VideoList>
+      <VideoList deleteVideo={deleteVideo} videos={videos}></VideoList>
     </div>
   );
 }
