@@ -12,15 +12,18 @@ function App() {
   }
 
   function deleteVideo(id){
-    setVideos(videos.filter(video=>video.id!==id))
-    
+    setVideos(videos.filter(video=>video.id!==id))    
+  }
+
+  function editVideo(id){
+    setVideos()    
   }
   return (
     <div className="App">
       <div className="Heading">
         <AddVideo addVideos={addVideos}></AddVideo>
       </div>
-      <VideoList deleteVideo={deleteVideo} videos={videos}></VideoList>
+      <VideoList deleteVideo={deleteVideo} editVideo={editVideo} videos={videos}></VideoList>
     </div>
   );
 }
