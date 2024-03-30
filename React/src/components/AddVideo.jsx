@@ -6,7 +6,8 @@ function AddVideo() {
     channel: "Tridib",
     verified: true,
   });
-  function handleSubmit() {
+  function handleSubmit(event) {
+    event.preventDefault()
     console.log(video)
   }
   function handleChange(e) {
