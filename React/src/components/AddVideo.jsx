@@ -1,16 +1,22 @@
+import { useState } from "react";
 import "./AddVideo.css"
 function AddVideo() {
+  const [video,setVideo]=useState({
+    time: "1 year ago",
+    channel: "Tridib",
+    verified: true
+  })
   function handleSubmit(){
 
   }
-  function handleChange(){
-
+  function handleChange(e){
+    console.log(e.target.value)
   }
   return (
     <>
       <form>
-        <input type="text" onChange={handleChange} placeholder="title" />
-        <input type="text" onChange={handleChange} placeholder="views"/>
+        <input type="text" name="title" onChange={handleChange} placeholder="title" />
+        <input type="text" name="views" onChange={handleChange} placeholder="views"/>
         <button
         onClick={handleSubmit}
           // onClick={() => {
@@ -19,11 +25,11 @@ function AddVideo() {
           //     {
           //       id: videos.length + 1,
           //       url: "https://picsum.photos/id/1/160/90",
-          //       views: "10K",
-          //       time: "1 year ago",
-          //       title: "Some random Tutorial",
-          //       channel: "Tridib",
-          //       verified: true,
+                // views: "10K",
+                // time: "1 year ago",
+                // title: "Some random Tutorial",
+                // channel: "Tridib",
+                // verified: true,
           //     },
           //   ]);
           // }}
