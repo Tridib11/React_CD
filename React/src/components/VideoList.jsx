@@ -1,9 +1,9 @@
 import Video from "./Video";
 import PlayButton from "./PlayButton";
-function VideoList({videos}){
+function VideoList({ videos }) {
   return (
     <>
-    {videos.map((video) => (
+      {videos.map((video) => (
         <Video
           key={video.id}
           id={video.id}
@@ -26,6 +26,6 @@ function VideoList({videos}){
         </Video>
       ))}
     </>
-  )
+  );
 }
-export default VideoList
+export default VideoList;
