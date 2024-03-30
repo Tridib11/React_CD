@@ -18,12 +18,14 @@ function App() {
           title={video.title}
           channel={video.channel}
           verified={video.verified}
-        />
-      ))}
-      <div style={{clear:'both'}}>
+        >
         <PlayButton message={"play-msg"} onPlay={()=>{console.log("Play")}} onPause={()=>{console.log("Pause")}}>Play</PlayButton>
-        {/* <PlayButton message={"pause-msg"} onClick={()=>{alert("Paused")}}>Pause</PlayButton> */}
-      </div>
+        </Video>
+        
+      ))}
+      {/* <div style={{clear:'both'}}>
+        <PlayButton message={"play-msg"} onPlay={()=>{console.log("Play")}} onPause={()=>{console.log("Pause")}}>Play</PlayButton>
+      </div> */}
     </div>
   );
 }
