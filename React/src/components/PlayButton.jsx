@@ -12,7 +12,7 @@ export default function PlayButton({ message, children, onPlay, onPause }) {
   }
   return (
     <button onClick={handleClick}>
-      {children}:{playing ? ">" : "||"}
+      {children}:{playing ?  "⏸️":"▶️" }
     </button>
   );
 }
