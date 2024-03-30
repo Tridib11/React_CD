@@ -10,7 +10,7 @@ function App() {
   const [videos, setVideos] = useState(videoDB);
 
   function addVideos(video) {
-    setVideos([...videos, video]);
+    setVideos([...videos, { ...video, id: video.length + 1 }]);
   }
   return (
     <div className="App">
