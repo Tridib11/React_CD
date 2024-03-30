@@ -13,7 +13,15 @@ function App() {
     <div className="App" onClick={()=>{console.log("App")}}>
       <div className="Heading">
         <button onClick={()=>{
-          setVideos([])
+          setVideos([...videos,{
+            id: videos.length+ 1,
+            url: "https://picsum.photos/id/1/160/90",
+            views: "10K",
+            time: "1 year ago",
+            title: "Some random Tutorial",
+            channel: "Tridib",
+            verified: true,
+          }])
         }}>Add Video</button>
       </div>
       {videos.map((video) => (
