@@ -4,7 +4,6 @@ import Video from "./components/Video";
 import React from "react";
 import PlayButton from "./components/PlayButton";
 
-
 function App() {
   return (
     <div className="App" onClick={()=>{console.log("App")}}>
@@ -13,7 +12,7 @@ function App() {
         <Video
           key={video.id}
           id={video.id}
-          views={video.views}
+          views={video.views} 
           time={video.time}
           title={video.title}
           channel={video.channel}
