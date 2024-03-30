@@ -1,35 +1,44 @@
 import { useState } from "react";
-import "./AddVideo.css"
+import "./AddVideo.css";
 function AddVideo() {
-  const [video,setVideo]=useState({
+  const [video, setVideo] = useState({
     time: "1 year ago",
     channel: "Tridib",
-    verified: true
-  })
-  function handleSubmit(){
-
-  }
-  function handleChange(e){
-    console.log(e.target.value)
+    verified: true,
+  });
+  function handleSubmit() {}
+  function handleChange(e) {
+    console.log(e.target.value);
+    setVideo({ ...video, [e.target.name]: e.target.value });
   }
   return (
     <>
       <form>
-        <input type="text" name="title" onChange={handleChange} placeholder="title" />
-        <input type="text" name="views" onChange={handleChange} placeholder="views"/>
+        <input
+          type="text"
+          name="title"
+          onChange={handleChange}
+          placeholder="title"
+        />
+        <input
+          type="text"
+          name="views"
+          onChange={handleChange}
+          placeholder="views"
+        />
         <button
-        onClick={handleSubmit}
+          onClick={handleSubmit}
           // onClick={() => {
           //   setVideos([
           //     ...videos,
           //     {
           //       id: videos.length + 1,
           //       url: "https://picsum.photos/id/1/160/90",
-                // views: "10K",
-                // time: "1 year ago",
-                // title: "Some random Tutorial",
-                // channel: "Tridib",
-                // verified: true,
+          // views: "10K",
+          // time: "1 year ago",
+          // title: "Some random Tutorial",
+          // channel: "Tridib",
+          // verified: true,
           //     },
           //   ]);
           // }}
