@@ -13,7 +13,7 @@ function App() {
     <div className="App" onClick={()=>{console.log("App")}}>
       <div className="Heading">
         <button onClick={()=>{
-          
+          setVideos([])
         }}>Add Video</button>
       </div>
       {videos.map((video) => (
