@@ -10,6 +10,10 @@ function App() {
   function addVideos(video) {
     setVideos([...videos, { ...video, id: videos.length + 1 }]);
   }
+
+  function deleteVideo(id){
+    
+  }
   return (
     <div className="App">
       <div className="Heading">
