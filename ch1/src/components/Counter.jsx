@@ -1,12 +1,15 @@
+import { useState } from "react";
+
 function Counter() {
-  let number = 0;
-  function handleClickButton() {
-    number++;
+  const [number,setNumber]=useState(0)
+  function handleClickButton(event) {
+    event.stopPropagation()
+    setNumber(number+1)
   }
   return(
   <>
-    <h1>{number}</h1>
-    <button onClick={handleClickButton}></button>
+    <h1 style={{color:'white'}}>{number}</h1>
+    <button onClick={handleClickButton}>Add</button>
   </>)
 }
 export default Counter;
