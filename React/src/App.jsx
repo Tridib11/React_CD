@@ -5,7 +5,6 @@ import React, { useState } from "react";
 import PlayButton from "./components/PlayButton";
 import Counter from "./components/Counter";
 
-
 function App() {
 
   const [videos,setVideos]=useState(videoDB)
@@ -43,8 +42,7 @@ function App() {
         
       ))}
 
-
-      <Counter></Counter>
+        
     </div>
   );
 }
