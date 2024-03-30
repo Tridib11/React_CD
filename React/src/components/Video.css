@@ -26,3 +26,7 @@
 .views span{
   padding: 0 0.5em;
 }
+
+.close{
+  position: absolute;
+}
