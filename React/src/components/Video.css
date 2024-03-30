@@ -6,6 +6,7 @@
   width: 15em;
   margin: 0 0.2em;
   float: left;
+  position: relative;
 }
 .pic img{
   width: 100%;
@@ -29,4 +30,5 @@
 
 .close{
   position: absolute;
+  right: 0;
 }
