@@ -5,6 +5,8 @@ function AddVideo({ addVideos }) {
     time: "1 year ago",
     channel: "Tridib",
     verified: true,
+    title:"",
+    views:""
   });
   function handleSubmit(event) {
     event.preventDefault();
@@ -21,12 +23,14 @@ function AddVideo({ addVideos }) {
           name="title"
           onChange={handleChange}
           placeholder="title"
+          value={video.title}
         />
         <input
           type="text"
           name="views"
           onChange={handleChange}
           placeholder="views"
+          value={video.views}
         />
         <button onClick={handleSubmit}>Add Video</button>
       </form>
