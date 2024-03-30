@@ -21,8 +21,8 @@ function App() {
         />
       ))}
       <div style={{clear:'both'}}>
-        <PlayButton message={"play-msg"}>Play</PlayButton>
-        <PlayButton message={"pause-msg"}>Pause</PlayButton>
+        <PlayButton message={"play-msg"} onPlay={()=>{console.log("Play")}} onPause={()=>{console.log("Pause")}}>Play</PlayButton>
+        {/* <PlayButton message={"pause-msg"} onClick={()=>{alert("Paused")}}>Pause</PlayButton> */}
       </div>
     </div>
   );
