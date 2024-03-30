@@ -1,14 +1,18 @@
+import { useState } from "react";
 import "./PlayButton.css";
 export default function PlayButton({ message, children, onPlay, onPause }) {
-  // don't use this approach
-  let playing = false;
+  const [playing, setPlaying] = useState(false);
   function handleClick(event) {
     // console.log(event)
-    event.stopPropagation()
+    event.stopPropagation();
     if (playing) onPause();
     else onPlay();
 
-    playing = !playing;
+    setPlaying(!playing);
   }
-  return <button onClick={handleClick}>{children}:{playing?'>':'||'}</button>;
+  return (
+    <button onClick={handleClick}>
+      {children}:{playing ? ">" : "||"}
+    </button>
+  );
 }
