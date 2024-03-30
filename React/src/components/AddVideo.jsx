@@ -1,20 +1,20 @@
 import { useState } from "react";
 import "./AddVideo.css";
 function AddVideo({ addVideos }) {
-  const [videos, setVideos] = useState({
+  const [video, setVideos] = useState({
     time: "1 year ago",
     channel: "Tridib",
     verified: true,
   });
   function handleSubmit(event) {
     event.preventDefault();
-    addVideos();
-    console.log(videos);
+    addVideos(video);
+    console.log(video);
   }
   function handleChange(e) {
     console.log(e.target.value);
-    setVideos({ ...videos, [e.target.name]: e.target.value });
-    console.log(videos);
+    setVideos({ ...video, [e.target.name]: e.target.value });
+    console.log(video);
   }
   return (
     <>
