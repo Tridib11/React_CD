@@ -9,12 +9,9 @@ function AddVideo({ addVideos }) {
   function handleSubmit(event) {
     event.preventDefault();
     addVideos(video);
-    console.log(video);
   }
   function handleChange(e) {
-    console.log(e.target.value);
     setVideos({ ...video, [e.target.name]: e.target.value });
-    console.log(video);
   }
   return (
     <>
