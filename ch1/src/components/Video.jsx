@@ -1,5 +1,5 @@
 import "./Video.css"
-function Video({id, title, channel="default-name", views, time,verified=false }) {
+function Video({id, title, channel="default-name", views, time,verified=false,children }) {
   return (
     <>
       <div className="container">
@@ -11,6 +11,9 @@ function Video({id, title, channel="default-name", views, time,verified=false })
 
         <div className="views">
           {views } views <span>.</span> {time}
+        </div>
+        <div>
+          {children}
         </div>
       </div>
     </>
