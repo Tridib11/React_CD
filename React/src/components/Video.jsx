@@ -1,5 +1,5 @@
 import "./Video.css"
-function Video({id, title, channel="default-name", views, time,verified=false,children }) {
+function Video({id, title, channel="default-name", views, time,verified=false,children,deleteVideo }) {
 
   
   return (
