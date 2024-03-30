@@ -7,7 +7,7 @@ import PlayButton from "./components/PlayButton";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" onClick={()=>{console.log("App")}}>
       <div className="Heading">Videos</div>
       {videos.map((video) => (
         <Video
@@ -19,7 +19,7 @@ function App() {
           channel={video.channel}
           verified={video.verified}
         >
-        <PlayButton message={"play-msg"} onPlay={()=>{console.log("Play")}} onPause={()=>{console.log("Pause")}}>Play</PlayButton>
+        <PlayButton  onPlay={()=>{console.log("Playing",video.title)}} onPause={()=>{console.log("Paused",video.title)}}>{video.title}</PlayButton>
         </Video>
         
       ))}
