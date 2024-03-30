@@ -4,7 +4,7 @@ function Counter() {
   const [number, setNumber] = useState(0);
   function handleClickButton(event) {
     event.stopPropagation();
-    setNumber(number + 1);
+    setNumber(number =>number+1);
   }
   return (
     <>
