@@ -1,5 +1,7 @@
 import "./Video.css"
 function Video({id, title, channel="default-name", views, time,verified=false,children }) {
+
+  
   return (
     <>
       <div className="container">
