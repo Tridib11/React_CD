@@ -12,7 +12,8 @@ function App() {
   }
 
   function deleteVideo(id){
-
+    setVideos(videos.filter(video=>video.id!==id))
+    
   }
   return (
     <div className="App">
