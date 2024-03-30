@@ -1,11 +1,12 @@
- import './PlayButton.css'
-export default function PlayButton({message,children}){
+import "./PlayButton.css";
+export default function PlayButton({ message, children, onPlay, onPause }) {
+  // don't use this approach
+  let playing = false;
+  function handleClick() {
+    if (playing) onPause();
+    else onPlay();
 
-  function handleClick(){
-    console.log(message)
+    playing = !playing;
   }
-  return (
-    <button onClick={handleClick}>{children}</button>
-  )
+  return <button onClick={handleClick}>{children}:{playing?'>':'||'}</button>;
 }
-
