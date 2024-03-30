@@ -7,33 +7,38 @@ import Counter from "./components/Counter";
 import AddVideo from "./components/AddVideo";
 
 function App() {
+  const [videos, setVideos] = useState(videoDB);
 
-  const [videos,setVideos]=useState(videoDB)
+  function addVideos(video) {
+    setVideos([...videos, video]);
+  }
   return (
     <div className="App">
       <div className="Heading">
-        <AddVideo></AddVideo>
+        <AddVideo addVideos={addVideos}></AddVideo>
       </div>
       {videos.map((video) => (
         <Video
           key={video.id}
           id={video.id}
-          views={video.views} 
+          views={video.views}
           time={video.time}
           title={video.title}
           channel={video.channel}
           verified={video.verified}
         >
-        <PlayButton  
-        onPlay={()=>{console.log("Playing",video.title)}} 
-        onPause={()=>{console.log("Paused",video.title)}}>
-          {video.title}
-        </PlayButton>
+          <PlayButton
+            onPlay={() => {
+              console.log("Playing", video.title);
+            }}
+            onPause={() => {
+              console.log("Paused", video.title);
+            }}
+          >
+            {video.title}
+          </PlayButton>
         </Video>
-        
       ))}
-
-        
     </div>
   );
 }
