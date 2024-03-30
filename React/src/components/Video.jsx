@@ -5,7 +5,7 @@ function Video({id, title, channel="default-name", views, time,verified=false,ch
   return (
     <>
       <div className="container">
-        <button className="close">X</button>
+        <button className="close" onClick={()=>deleteVideo(id)}>X</button>
         <div className="pic">
           <img src={`https://picsum.photos/id/${id}/160/90`} alt="Katherine Johnson" />
         </div>
