@@ -1,6 +1,6 @@
 import Video from "./Video";
 import PlayButton from "./PlayButton";
-function VideoList({ videos,deleteVideo }) {
+function VideoList({ videos,deleteVideo,editVideo }) {
   return (
     <>
       {videos.map((video) => (
