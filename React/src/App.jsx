@@ -16,7 +16,7 @@ function App() {
   }
 
   function editVideo(id){
-    setVideos()    
+    console.log(id)   
   }
   return (
     <div className="App">
