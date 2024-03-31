@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./AddVideo.css";
 
 const initialState={
@@ -18,6 +18,12 @@ function AddVideo({ addVideos,editableVideo }) {
   function handleChange(e) {
     setVideos({ ...video, [e.target.name]: e.target.value });
   }
+
+  useEffect(()=>{
+    if(editableVideo){
+      setVideos(editableVideo)
+    }
+  },[editableVideo])
   return (
     <>
       <form>
