@@ -8,7 +8,7 @@ const initialState={
   title:"",
   views:""
 }
-function AddVideo({ addVideos }) {
+function AddVideo({ addVideos,editableVideo }) {
   const [video, setVideos] = useState(initialState);
   function handleSubmit(event) {
     event.preventDefault();
