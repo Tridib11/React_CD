@@ -13,6 +13,7 @@ function VideoList({ videos,deleteVideo,editVideo }) {
           channel={video.channel}
           verified={video.verified}
           deleteVideo={deleteVideo}
+          editVideo={editVideo}
         >
           <PlayButton
             onPlay={() => {
