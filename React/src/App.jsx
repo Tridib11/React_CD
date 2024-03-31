@@ -6,13 +6,15 @@ import VideoList from "./components/VideoList";
 
 function App() {
   const [videos, setVideos] = useState(videoDB);
+  const [editableVideo, setEditableVideo] = useState(null);
+
 
   function addVideos(video) {
     setVideos([...videos, { ...video, id: videos.length + 1 }]);
   }
 
   function deleteVideo(id){
-    setVideos(videos.find(video=>video.id===id))    
+    setEditableVideo(videos.find(video=>video.id===id))    
   }
 
   function editVideo(id){
@@ -21,7 +23,7 @@ function App() {
   return (
     <div className="App">
       <div className="Heading">
-        <AddVideo addVideos={addVideos}></AddVideo>
+        <AddVideo addVideos={addVideos} editableVideo={editableVideo}></AddVideo>
       </div>
       <VideoList deleteVideo={deleteVideo} editVideo={editVideo} videos={videos}></VideoList>
     </div>
